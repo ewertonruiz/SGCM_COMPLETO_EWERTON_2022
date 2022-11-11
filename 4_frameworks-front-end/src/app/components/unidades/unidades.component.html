@@ -1,0 +1,28 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Endereço</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let unidade of unidades">
+            <td class="fit">{{unidade.id}}</td>
+            <td class="fit">{{unidade.nome}}</td>
+            <td class="fit">{{unidade.endereco}}</td>
+            <td>
+                <a class="botao" routerLink="/agenda/form" [queryParams]="{id: unidade.id}">Editar</a>
+                <a class="botao excluir" (click)="delete(unidade.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Total de registros: {{unidades.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+

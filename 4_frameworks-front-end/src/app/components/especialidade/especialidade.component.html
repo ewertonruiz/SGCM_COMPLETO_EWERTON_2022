@@ -1,0 +1,26 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let especialidade of especialidades">
+            <td class="fit">{{especialidade.id}}</td>
+            <td class="fit">{{especialidade.nome}}</td>
+            <td>
+                <a class="botao" routerLink="/agenda/form" [queryParams]="{id: especialidade.id}">Editar</a> 
+                <a class="botao excluir" (click)="delete(especialidade.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="7">Total de registros: {{especialidades.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+

@@ -1,0 +1,35 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome Completo</th>
+            <th>Nome Usuário</th>
+            <th>Senha</th>
+            <th>Ativo</th>
+            <th>Papel</th>
+            <th>Ações</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td class="fit">{{usuario.id}}</td>
+            <td class="fit">{{usuario.nomeCompleto}}</td>
+            <td class="fit">{{usuario.nomeUsuario}}</td>
+            <td class="fit">{{usuario.senha}}</td>
+            <td class="fit">{{usuario.ativo}}</td>
+            <td class="fit">{{usuario.papel}}</td>
+            
+            <td>
+                <a class="botao" routerLink="/agenda/form" [queryParams]="{id: usuario.id}">Editar</a>
+                <a class="botao excluir" (click)="delete(usuario.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="7">Total de registros: {{usuarios.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+

@@ -1,0 +1,178 @@
+[
+  {
+    "_id": "553a2f56-2727-452b-9ccf-8fd8800374e9",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/{id}",
+    "url": "http://localhost:9000/atendimento/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-09-28T22:56:46.680Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "bc0b1da9-b163-4cd0-a4c2-190297dcbc58",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-10-01T15:31:27.620Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "a37428d0-c21a-4a9d-bad6-7ecd7c044e40",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/{id}",
+    "url": "http://localhost:9000/atendimento/5",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-24T14:32:43.332Z",
+    "modified": "2022-10-01T15:31:36.293Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "6047bbec-06e1-41d0-88b6-ea98169ba589",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-24T14:48:21.195Z",
+    "modified": "2022-09-25T00:58:22.308Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"id\": 20,\n  \"data\": \"2022-10-01\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0e6c9146-34c0-44a5-95db-7093860a4709",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/",
+    "url": "http://localhost:9000/atendimento/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-24T14:48:21.195Z",
+    "modified": "2022-09-29T23:36:59.464Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"data\": \"2022-10-01T05:00:00\",\n  \"hora\": \"14:00:00\",\n  \"profissional\": {\n    \"id\": 1\n  },\n  \"convenio\": {\n    \"id\": 1\n  },\n  \"paciente\": {\n    \"id\": 1\n  },\n  \"status\": \"AGENDADO\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4a3f998c-a2ce-4865-889b-3c85b640dbb9",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/status/{id}",
+    "url": "http://localhost:9000/atendimento/status/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2022-09-30T00:13:26.302Z",
+    "modified": "2022-10-01T15:31:00.189Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "8a252f52-2904-4bbc-a4cc-072b12a54964",
+    "colId": "history",
+    "containerId": "",
+    "name": "/atendimento/busca/giulia",
+    "url": "http://localhost:9000/atendimento/busca/giulia",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-30T01:07:05.824Z",
+    "modified": "2022-09-30T01:07:05.839Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "ef5b87bc-3070-49c0-a1dc-19917589dece",
+    "colId": "history",
+    "containerId": "",
+    "name": "/convenio/",
+    "url": "http://localhost:9000/convenio/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-02T00:21:59.022Z",
+    "modified": "2022-10-02T00:26:31.964Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "d91834a2-5009-4499-a0b6-b0841526153c",
+    "colId": "history",
+    "containerId": "",
+    "name": "/convenio/",
+    "url": "http://localhost:9000/convenio/",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-02T00:25:48.068Z",
+    "modified": "2022-10-02T00:26:21.923Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n    \"ativo\": true,\n    \"cnpj\": \"16.243.809/0001-84\",\n    \"email\": \"contato@testeConvenioUm.com.br\",\n    \"nome\": \"Convenio Um\",\n    \"razaoSocial\": \"Convenio Um SAUDE S.A.\",\n    \"representante\": \"Wallison Lula da Silva\",\n    \"telefone\": \"(68) 1313-1313\"\n  }",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "4a58e9fc-01f6-4f95-ba59-10baa6bf69fa",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:9000/convenio/busca/teste",
+    "url": "http://localhost:9000/convenio/busca/teste",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-02T00:27:46.545Z",
+    "modified": "2022-10-02T00:27:55.787Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "18b80c1e-64cb-4aa4-8fb4-cc56e9283632",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:9000/convenio/busca/Teste",
+    "url": "http://localhost:9000/convenio/busca/Teste",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-02T00:28:17.464Z",
+    "modified": "2022-10-05T00:12:22.414Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "basic",
+      "basic": {
+        "username": "root",
+        "password": "9546a820-cc4d-4f75-8d94-cc02b7b79590"
+      }
+    },
+    "tests": []
+  }
+]

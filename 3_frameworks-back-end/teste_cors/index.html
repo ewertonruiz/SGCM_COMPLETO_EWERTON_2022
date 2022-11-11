@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste CORS</title>
+</head>
+<body>
+    
+    <button id="get">GET</button>
+    <pre></pre>
+
+    <script>
+
+        function get() {
+            fetch("http://localhost:9000/atendimento")
+            .then(resposta => resposta.json())
+            .then(dados => {
+                let elemento = document.querySelector("pre");
+                elemento.innerText = JSON.stringify(dados, undefined, 2);
+            })
+        };
+
+        document.querySelector("button#get").addEventListener("click", get);
+    
+    </script>
+</body>
+</html>

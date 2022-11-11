@@ -1,0 +1,36 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Registro Conselho</th>
+            <th>Telefone</th>
+            <th>Email</th>
+            <th>Ações</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let profissional of profissionais">
+            <td class="fit">{{profissional.id}}</td>
+            <td class="fit">{{profissional.nome}}</td>
+            <td class="fit">{{profissional.registroConselho}}</td>
+            <td class="fit">{{profissional.telefone}}</td>
+            <td class="fit">{{profissional.email}}</td>
+            
+          
+
+            <td>
+                <a class="botao" routerLink="/agenda/form" [queryParams]="{id: profissional.id}">Editar</a>
+                <a class="botao excluir" (click)="delete(profissional.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">Total de registros: {{profissionais.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+

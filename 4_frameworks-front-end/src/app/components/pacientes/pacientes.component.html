@@ -1,0 +1,46 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Cep</th>
+            <th>Cidade</th>
+            <th>Data de Nascimento</th>
+            <th>E-mail</th>
+            <th>Endereço</th>
+            <th>Estado</th>
+            <th>Grupo Sanguineo</th>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let paciente of pacientes">
+            <td class="fit">{{paciente.id}}</td>
+            <td class="fit">{{paciente.nome}}</td>
+            <td class="fit">{{paciente.email}}</td>
+            <td class="fit">{{paciente.telefone}}</td>
+            <td class="fit">{{paciente.dataNascimento}}</td>
+            <td class="fit">{{paciente.grupoSanguineo}}</td>
+            <td class="fit">{{paciente.sexo}}</td>
+            <td class="fit">{{paciente.cep}}</td>
+            <td class="fit">{{paciente.endereco}}</td>
+            <td class="fit">{{paciente.cidade}}</td>
+            <td class="fit">{{paciente.estado}}</td>
+                        
+            <td>
+                <a class="botao" routerLink="/agenda/form" [queryParams]="{id: paciente.id}">Editar</a>
+                <a class="botao excluir" (click)="delete(paciente.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="12">Total de registros: {{pacientes.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+

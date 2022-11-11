@@ -1,0 +1,40 @@
+<!-- <app-barra-comandos (eventoBusca)="get($event)"></app-barra-comandos> -->
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ativo</th>
+            <th>CNPJ</th>
+            <th>E-mail</th>
+            <th>Nome</th>
+            <th>Razão Social</th>
+            <th>Representante</th>
+            <th>Telefone</th>
+            <th>Ações</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let convenio of convenios">
+            <td class="fit">{{convenio.id}}</td>
+            <td class="fit">{{convenio.ativo}}</td>
+            <td class="fit">{{convenio.cnpj}}</td>
+            <td class="fit">{{convenio.email}}</td>
+            <td class="fit">{{convenio.nome}}</td>
+            <td class="fit">{{convenio.razaoSocial}}</td>
+            <td class="fit">{{convenio.representante}}</td>
+            <td class="fit">{{convenio.telefone}}</td>
+
+            <td>
+                <a class="botao" routerLink="/convenios/form" [queryParams]="{id: convenio.id}">Editar</a>
+                <a class="botao excluir" (click)="delete(convenio.id)">Cancelar</a>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="8">Total de convenios: {{convenios.length}}</td>
+        </tr>
+    </tfoot>
+</table>
+
